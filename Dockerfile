@@ -1,6 +1,5 @@
 FROM glanceapp/glance:latest
-WORKDIR /app
-COPY config ./config
-COPY assets ./assets
-EXPOSE 8080
-CMD ["./glance"]
+
+# Copy local config and assets into the image
+COPY config /app/config
+COPY assets /app/assets
